@@ -44,7 +44,6 @@ def get_pid(window):
 
 def check(screen):
     window = screen.get_active_window()
-    #return is_fullscreen(window)
 
     if is_fullscreen(window):
         if FULLSCREEN_ENOUGH:
