@@ -172,7 +172,7 @@ def main():
     ns = parser.parse_args()
 
     connection = ooxcb.connect(ns.display, auth_string=ns.auth)
-    ssc = ScreenSaverControl(connection, ns.names)
+    ssc = ScreenSaverControl(connection, ns.name)
 
     try:
         ssc.run(ns.interval)
