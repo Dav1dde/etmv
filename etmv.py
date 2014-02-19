@@ -96,7 +96,10 @@ class ScreenSaverControl(object):
             self.enable_screensaver()
 
     def should_disable(self):
-        current = self.screen.get_active_window()
+        try:
+            current = self.screen.get_active_window()
+        except IndexError:
+            return False
 
         if current.is_fullscreen():
             if current.is_flash():
